@@ -29,10 +29,17 @@ class TodoService{
             console.error(error)
         }
     }
-    checked(todoId){
-        let foundTodo = ProxyState.todo.find(t=> t.id == todoId)
-        foundTodo.completed = !foundTodo.completed
+    async checked(id){
+        let todo = ProxyState.todo.find (t=> t._id == id)
+        //debugger
+        todo.completed = !todo.completed
+        try{
+        const res = await todoApi.put('' + id, todo)
         ProxyState.todo = ProxyState.todo
+        }catch (error){
+            console.error(error)
+        }
+        
     }
 }
 export const todoservice = new TodoService()

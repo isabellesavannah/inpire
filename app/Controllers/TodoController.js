@@ -22,7 +22,7 @@ export default class TodoController{
     deleteTodo(_id){
         todoservice.deleteTodo(_id)
     }
-    checked(todoId){
-        todoservice.checked(todoId)
+    checked(_id){
+        todoservice.checked(_id)
     }
 }
