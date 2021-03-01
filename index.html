@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>inspire</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+                <span class="ml-2">inspire</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-12" id="image">
+                <div class="row">
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-3">
+                <form onsubmit="app.todoController.createTodo(event)">
+                    <div class="form-group">
+                        <input type="text" name="description" maxlength="50" required minlength="3"
+                            placeholder="Enter Your Task">
+                        <button class="btn-success" type="submit">Enter</button>
+                    </div>
+                </form>
+                <div id="todo">
+                </div>
+            </div>
+            <div class="col-3" id="weather">
+            </div>
+            <div class="col-12" id="quote">
+
+            </div>
+            <div id="author">
+
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-light text-dark">
+        <div class="row text-center">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
